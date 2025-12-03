@@ -152,3 +152,63 @@
   .teachers { flex-direction: column; gap:12px; }
   .hero nav ul { display:none; }
 }
+
+
+/* =========================
+   TESTIMONIAL SECTION
+   ========================= */
+
+.testimonial {
+  background: #c875f3;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 100px 40px;
+}
+
+/* Circular image */
+.testimonial img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Quote text */
+.testimonial blockquote {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+/* Name */
+.testimonial h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* Job text */
+.testimonial p {
+  font-size: 16px;
+  font-style: italic;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial blockquote {
+    max-width: 100%;
+  }
+}
