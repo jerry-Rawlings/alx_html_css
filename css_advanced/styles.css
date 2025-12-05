@@ -212,3 +212,176 @@
     max-width: 100%;
   }
 }
+
+
+/* ===============================
+   POPULAR TUTORIALS SECTION
+   =============================== */
+
+.popular {
+  padding: 80px 40px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.popular h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #0a0a28;
+}
+
+.popular h2 span {
+  color: #b876b8;
+}
+
+/* --- GRID --- */
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+/* --- CARD --- */
+.tutorial-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.15);
+  padding-bottom: 20px;
+}
+
+/* --- IMAGE --- */
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  display: block;
+}
+
+/* --- PLAY BUTTON OVERLAY --- */
+.play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn img {
+  width: 75px;
+  border-radius: 50%;
+}
+
+/* --- TEXT --- */
+.tutorial-card h3 {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 18px 18px 6px;
+}
+
+.tutorial-card p {
+  text-align: left;
+  font-size: 14px;
+  color: #666;
+  margin: 0 18px 18px;
+}
+
+/* --- AUTHOR ROW --- */
+.author-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 18px 18px;
+}
+
+.author-row img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.author-row h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b876b8;
+}
+
+/* --- STARS --- */
+.stars {
+  display: flex;
+  gap: 4px;
+  margin: 0 18px 6px;
+}
+
+.stars i {
+  color: #b876b8;
+  font-size: 14px;
+}
+
+/* --- TIME --- */
+.time {
+  text-align: right;
+  font-weight: 600;
+  font-size: 13px;
+  color: #b6b6b6;
+  margin: 0 18px 18px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1000px) {
+  .tutorial-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tutorial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 18px;
+}
+
+.rating-row .stars {
+  display: flex;
+  gap: 4px;
+}
+
+.rating-row .stars i {
+  color: #b876b8;
+  font-size: 14px;
+}
+
+.rating-row .time {
+  font-weight: 600;
+  font-size: 13px;
+  color: #b6b6b6;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #b876b8 0%, #8a4c8a 100%);
+  padding: 20px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  opacity: 0.9;
+}
