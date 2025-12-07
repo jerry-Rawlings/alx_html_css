@@ -385,3 +385,91 @@
   box-shadow: 0 8px 40px rgba(0,0,0,0.35);
   opacity: 0.9;
 }
+
+/* ===============================
+   FREE MEMBERSHIP SECTION
+   =============================== */
+
+.membership {
+  background: #0a1224;
+  text-align: center;
+  padding: 100px 40px;
+  color: #ffffff;
+}
+
+/* Title */
+.membership h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+.membership h2 span {
+  color: #b876f3;
+}
+
+/* 4 items in a row */
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+
+/* Individual Item */
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.member-card img {
+  width: 80px;
+  opacity: 0.9;
+}
+
+.member-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.member-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 220px;
+  color: #d2d2d2;
+}
+
+/* Button */
+.membership-btn {
+  padding: 14px 45px;
+  border: none;
+  border-radius: 50px;
+  background: #b876f3;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.membership-btn:hover {
+  transform: scale(1.05);
+  background: #9a54d8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .membership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .membership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
