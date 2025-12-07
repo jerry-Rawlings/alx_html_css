@@ -473,3 +473,78 @@
   }
 }
 
+/* ===============================
+   F.A.Q SECTION
+   =============================== */
+
+section:nth-of-type(5) {
+  padding: 120px 80px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Title */
+section:nth-of-type(5) > h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
+  color: #0a0a28;
+  letter-spacing: 8px;
+  margin-bottom: 100px;
+}
+
+/* Outer wrapper (2 columns) */
+section:nth-of-type(5) > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 140px;
+}
+
+/* Vertical stack inside each column */
+section:nth-of-type(5) > div > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  color: #0a0a28;
+  max-width: 520px;
+}
+
+/* Question Heading */
+section:nth-of-type(5) h3 {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #0a0a28;
+}
+
+/* Answer text */
+section:nth-of-type(5) div > div > div:nth-of-type(even) {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #1c1c31;
+  opacity: 0.85;
+}
+
+/* --------------------------------
+   Responsive
+---------------------------------- */
+@media(max-width: 1000px) {
+  section:nth-of-type(5) > div {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+}
+
+@media(max-width: 600px) {
+  section:nth-of-type(5) {
+    padding: 80px 30px;
+  }
+
+  section:nth-of-type(5) > h2 {
+    font-size: 38px;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+  }
+}
+
+
