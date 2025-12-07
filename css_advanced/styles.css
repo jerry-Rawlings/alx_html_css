@@ -548,3 +548,65 @@ section:nth-of-type(5) div > div > div:nth-of-type(even) {
 }
 
 
+/* =========================
+        FOOTER SECTION
+   ========================= */
+
+footer {
+  background: #061529;       /* deep navy like the image */
+  padding: 80px 0 40px;
+  color: white;
+  font-family: sans-serif;
+}
+
+footer section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top row: logo left, icons right */
+footer section > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* Logo */
+footer section > div img {
+  height: 40px;
+  filter: brightness(0) invert(1);  /* makes logo white if needed */
+}
+
+/* Social icons */
+footer i {
+  font-size: 22px;
+  color: white;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+footer i:hover {
+  opacity: 0.7;
+}
+
+/* Copyright centered below icons */
+footer p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  footer section > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer i {
+    margin-left: 15px;
+  }
+}
