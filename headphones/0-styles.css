@@ -10,6 +10,7 @@
   --primary-color: #FF6565;
   --dark-color: #071629;
   --white-color: #ffffff;
+  --max-width: 1000px;
   --font-main: Arial, Helvetica, sans-serif;
 }
 
@@ -19,46 +20,66 @@ body {
   color: var(--white-color);
 }
 
+a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
 /* ================= HERO ================= */
 .hero {
   min-height: 100vh;
 
-  /* THIS IS THE BACKGROUND IMAGE YOU ASKED FOR */
+  /* BACKGROUND IMAGE */
   background-image: url("images/headphones_hero_1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
 }
 
-/* DARK OVERLAY */
-.overlay {
+/* OVERLAY */
+.hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(7, 22, 41, 0.4),
-    rgba(7, 22, 41, 0.9)
-  );
+  background: rgba(7, 22, 41, 0.7);
 }
 
-/* CONTENT */
-.hero-content {
+/* CONTAINER */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
   position: relative;
-  max-width: 700px;
   z-index: 1;
+}
+
+/* ================= NAV ================= */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  text-align: center;
+  margin-top: 80px;
 }
 
 .hero-content h1 {
   font-size: 32px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .subtitle {
@@ -67,19 +88,18 @@ body {
 }
 
 .description {
+  max-width: 600px;
+  margin: 30px auto 0;
   font-size: 14px;
-  line-height: 1.7;
-  margin-top: 30px;
+  line-height: 1.6;
 }
 
-/* BUTTON */
+/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
   background: var(--primary-color);
-  color: var(--white-color);
-  padding: 15px 40px;
-  border-radius: 30px;
-  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 25px;
   font-size: 14px;
   font-weight: bold;
 }
@@ -90,11 +110,16 @@ body {
 
 /* ================= MOBILE ================= */
 @media (max-width: 480px) {
+
+  .nav-links {
+    display: none;
+  }
+
   .hero-content h1 {
     font-size: 24px;
   }
 
-  .description {
-    font-size: 13px;
+  .hero-content {
+    margin-top: 40px;
   }
 }
