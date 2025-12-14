@@ -1,0 +1,74 @@
+/* ==============================
+   Our results section
+================================ */
+
+.our-results {
+  background-image: url("images/headphones_hero_2.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+.our-results .section-header p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+
+.result-item {
+  width: 22%;
+  min-width: 160px;
+}
+
+.result-item p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Pentagon shape */
+.pentagon {
+  width: 140px;
+  height: 140px;
+  background-color: #ff6565;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(
+    50% 0%,
+    100% 38%,
+    82% 100%,
+    18% 100%,
+    0% 38%
+  );
+}
+
+.pentagon span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .results {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .result-item {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .result-item {
+    width: 100%;
+  }
+}
