@@ -1,0 +1,44 @@
+/* ==============================
+   Animations for items
+================================ */
+
+/* General keyframes */
+@keyframes bounceScale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15) rotate(5deg); }
+}
+
+@keyframes fadeRotate {
+  0% { opacity: 0; transform: rotate(-15deg) scale(0.8); }
+  100% { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* What we do items */
+.service-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-item:hover {
+  animation: bounceScale 0.8s ease-in-out;
+}
+
+/* Our results pentagons */
+.result-item .pentagon {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeRotate 1s ease forwards;
+}
+
+.result-item:hover .pentagon {
+  animation: pulse 0.6s ease infinite;
+}
+
+/* Stagger animation delay for results */
+.result-item:nth-child(1) .pentagon { animation-delay: 0.1s; }
+.result-item:nth-child(2) .pentagon { animation-delay: 0.2s; }
+.result-item:nth-child(3) .pentagon { animation-delay: 0.3s; }
+.result-item:nth-child(4) .pentagon { animation-delay: 0.4s; }
