@@ -1,0 +1,84 @@
+/* ==============================
+   Our Results Section
+================================ */
+.our-results {
+  background-color: #f4f4f4;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.our-results .section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.our-results .section-header p {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  color: #555;
+}
+
+.results {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.result-item {
+  width: 22%;
+  min-width: 150px;
+}
+
+.result-item p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Pentagon using CSS */
+.pentagon {
+  width: 120px;
+  height: 120px;
+  background-color: #ff6565;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(
+    50% 0%, 
+    95% 35%, 
+    77% 100%, 
+    23% 100%, 
+    5% 35%
+  );
+  transition: transform 0.3s ease;
+}
+
+.pentagon span {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.pentagon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .results {
+    justify-content: center;
+  }
+
+  .result-item {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .result-item {
+    width: 100%;
+  }
+}
